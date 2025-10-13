@@ -1,5 +1,0 @@
-numpy
-pyyaml
-torch
-scipy
-Pillow
