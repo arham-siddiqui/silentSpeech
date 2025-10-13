@@ -1,0 +1,26 @@
+seed: 1337
+data:
+  dataset: inner_speech_eeg_fmri
+  root: data/ds004196
+  subjects: [sub-01, sub-02, sub-03, sub-05]
+  words: [child, daughter, father, wife, four, three, ten, six]
+  eeg_sample_rate: 500
+  fmri_tr: 2.0
+  window_seconds: 2.0
+  train_split: 0.8
+  num_workers: 2
+model:
+  latent_dim: 128
+  temperature: 0.1
+  eeg_encoder: transformer
+  fmri_encoder: conv3d_tiny
+  fusion: concat
+train:
+  batch_size: 4
+  max_epochs: 1
+  lr: 2e-4
+  weight_decay: 1e-4
+  precision: 32
+eval:
+  metrics: [accuracy, confusion_matrix]
+  save_dir: outputs/inner_speech_tiny
