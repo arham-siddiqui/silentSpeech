@@ -1,0 +1,1 @@
+class EMGThroat: pass
