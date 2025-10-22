@@ -3,7 +3,7 @@ Here’s a crisp hand-off you can paste into any LLM to get them up to speed fas
 # Project snapshot
 
 **Name:** silentSpeech
-**Goal:** Goal: Learn and align multimodal signals for silent/speech interfaces (audio, lip landmarks/video, laser speckle, FMCW radar, UWB), with future EEG↔fMRI fusion. Contrastive learning core + interpretable neighborhood analysis.
+**Goal:** Goal: Learn and align multimodal signals for silent/speech interfaces (audio, lip landmarks/video, laser speckle, FMCW radar, UWB), with future EEG↔fMRI fusion. 
 
 ## Repo layout (top level)
 
@@ -102,10 +102,10 @@ Notes:
 
 ```bash
 python -m src.scripts.validate_rvtall --base src/data/RVTALL
-python -m src.training.train_contrastive --config src/configs/___.yaml
+python -m src.training.train_ --config src/configs/___.yaml
 ```
 
-Recommended small settings (RTX 3050 Ti):
+Recommended small settings (RTX 3050 Ti ASSUME MAC + google colab support):
 
 * `batch_size: 8–12`, `num_workers: 0` (Windows), `max_epochs: 5` (sanity) → then ~25
 * Mixed precision (`16-mixed`) if supported
@@ -122,9 +122,9 @@ Recommended small settings (RTX 3050 Ti):
 
 * Vowel classification (probe on frozen embeddings): accuracy
 * Word shortlist classification: Top-1/Top-5
-* (Optional) constrained phrase CER/WER via tiny CTC head
+* (Optional)
 
-**Interpretability (CellTransformer-style):**
+**Interpretability ():**
 
 
 **Alpha acceptance (initial targets):**
